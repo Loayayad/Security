@@ -20,8 +20,11 @@ it can be  callable from command line as follows:
     - A string key for vigenere cipher
 
 • Examples calls from terminal:
+
 ◦ cipher.py affine decrypt input output a b
+
 ◦ cipher.py shift encrypt input output a 
+
 ◦ cipher.py vigenere decrypt input output string
 
 
