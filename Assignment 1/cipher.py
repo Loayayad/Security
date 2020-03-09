@@ -2,7 +2,7 @@ import sys
 
 
 # A Caesar Cipher Technique
-def ceaser_encrypt(text,s): 
+def ceaser_enc(text,s): 
     result = "" 
   
     # traverse text 
@@ -22,7 +22,7 @@ def ceaser_encrypt(text,s):
             result+=char
     return result 
 
-def ceaser_decrypt(text,s): 
+def ceaser_dec(text,s): 
     result = "" 
   
     # traverse text 
@@ -181,7 +181,7 @@ if cipher == "shift" and kind == "encrypt":
     #print ("Shift : " + str(s))
     #print ('Cipher: ' + ceaser_enc(text, s))
     #print("this is enc")
-    file1.writelines(ceaser_encrypt(text, s))
+    file1.writelines(ceaser_enc(text, s))
     file1.close()
 
 if cipher == "shift" and kind == "decrypt":
@@ -191,7 +191,7 @@ if cipher == "shift" and kind == "decrypt":
     #print ("Shift : " + str(s))
     #print ("Cipher: " + ceaser_dec(text, s))
     #print("this is dec")
-    file1.writelines(ceaser_decrypt(text, s))
+    file1.writelines(ceaser_dec(text, s))
     file1.close()
 
 
