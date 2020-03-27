@@ -11,7 +11,7 @@
  As we see we start by  unpack the 2 byte block using "<4I" format which stands for leaving the first 4 bits as it's and forming the rest in 4 byte.
 
  Then analysing encryption stage two
- starting of <a>, <b>, <c>, <d> the result of second stage as we will do the reverse of encrypt down to up.
+ starting of `<a>, <b>, <c>, <d>` the result of second stage as we will do the reverse of encrypt down to up.
 
  `a, b, c, d = c ^ F(d | F(b ^ F(a)) ^ F(d | b) ^ a), b ^ F(d ^ F(a) ^ (d | a)), a ^ F(d | F(d) ^ d), d ^ 1337`
 
