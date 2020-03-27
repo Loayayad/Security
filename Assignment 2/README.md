@@ -27,9 +27,13 @@
  Finally,Decryption of stage two
 
  `temp = a`
+ 
  `d = d ^ 1337  # 0000 0101 0011 1001`
+ 
  `a = c ^ (F(d | F(d) ^ d))`
+ 
  `b = b ^ (F(d ^ F(a) ^ (d | a)))`
+ 
  `c = temp ^ (F(d | F(b ^ F(a)) ^ F(d | b) ^ a))`
 
 ## Third:
