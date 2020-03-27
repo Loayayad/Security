@@ -11,7 +11,7 @@
 ## Second:
  We will start from the function encrypt and try to understand how it works 
 
- As we see we start by  unpack the 2 byte block using "<4I" format which stands for leaving the first 4 bits as it's and forming the rest in 4 byte.
+ As we see we start by  unpack the 2 byte block using "<4I" format which stands for leaving the first 4 bits as it's and forming the rest in  4 byte.
 
  Then analysing encryption stage two
  starting of `<a>, <b>, <c>, <d>` the result of second stage as we will do the reverse of encrypt down to up.
@@ -51,9 +51,13 @@
  Finally,Decryption of stage one
 
  `temp = a`
+ 
  `a = d ^ 31337  # 0111 1010 0110 1001`
+ 
  `d = c ^ (F(a | F(a) ^ a))`
+ 
  `c = b ^ (F(a ^ F(d) ^ (a | d)))`
+ 
  `b = temp ^ (F(a | F(c ^ F(d)) ^ F(a | c) ^ d))`
 
 ## Fourth:
